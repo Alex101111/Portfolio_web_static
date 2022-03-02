@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+*{
+    padding: 0%;margin: 0%;
+    font-family: 'Roboto Slab';
+}
+
+.Highlight{
+    display: none;
+    position: absolute;
+    height:100%;
+    width: 110px;
+    background-color: gainsboro;
+    z-index: -1;
+    animation-duration:1s;
+    transition: 0.5s transform ease-in-out;
+}
+html{height: 100%;}
+
+
+body{
+    height: 100%;
+     background-color: rgb(153, 153, 153); 
+}
+.Highlight.active{
+    display: inline-block;
+}
+
+.MAIN{    margin-right: 5%; 
+    margin-left: 5%; 
+    width: 90%;
+    overflow: hidden;
+}
+
+.button{
+    background-color: rgb(125, 70, 255);
+    border: none;
+    padding: 20px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bolder;
+    margin: 25px 50px 25px 50px;
+    transition: 0.2s all;
+}
+.button:hover{
+    transform: scale(115%);
+}
+.button:active{
+    transform: scale(90%);
+}
+    
+li {
+    list-style-type: none;
+}
+
+
+header, .home,.aboutMe,.mySkills ,#BurgerMenu ,.aboutMeSectionOne ,.aboutMeSectionTwo ,.skillsBox ,.skillsBox:last-child ,.myProjects ,.contact {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 25px;
+}
+
+
+h2{padding: 50px; font-size: 35px;}
+
+
+
+header {
+    z-index: 9999;
+    background-color: white;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    top :0px;
+    
+}
+#Logo{
+    display: inline-block;
+    z-index: 99999;
+    position: absolute;
+    height: 200px;
+    top : 22px;
+    left: 5%;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+header a{
+    padding: 5%;
+    font-size:x-large;
+    color: black;
+    text-decoration: none;
+}
+
+#burger{
+    display: none;
+}
+
+.navJs{
+    display: grid;
+grid-column: 2;
+grid-row: 1;
+padding-top: 200%;
+
+
+}
+
+.bodyJs{
+
+position: fixed;
+width: -moz-available;
+}
+
+
+.headerJs{
+    background-color: rgba(0, 0, 255, 0.418);
+    height: 100%;
+    transition: 0.45s ease-in;
+}
+
+nav a.elemntPadding{
+    padding-top: 20px;
+}
+@media screen and (max-width: 768px) {
+
+    #burger{
+        display: inline-block;
+        width: 100%;
+        height: 0px;
+    }
+    
+
+ 
+    header nav{
+        display: none;
+    }
+    
+    #BurgerMenu{
+        
+    }
+    #BurgerMenu a {
+        display: flex;
+
+    }
+    #BurgerMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        z-index: 997;
+        width: 100%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        transform: translatey(-88%);
+        background-color: rgba(255, 255, 255);
+        transition:  transform .5s ease-in-out , background-color 0.5s ease-in-out;
+    }
+ 
+    #BurgerIcon{
+            display: inline-block;
+            z-index: 99999;
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 15px;
+            right: 5%;
+            transition: transform .5s;
+            transform: rotate(0deg);
+       }
+    
+    #BurgerMenu.active{
+        transform: translatey(0%);
+        background-color: rgb(125, 70, 255,1);
+    }
+   #BurgerIcon.active{
+       transform: rotate(90deg);
+    }
+    /*
+    header{
+        grid-template-rows: 100px;
+        height: 10%;
+        z-index: 9999;
+    }
+    header nav a{
+        padding-top: 20px;
+        color: black;
+        ;
+        
+    }*/
+
+
+}
+
+#profile{
+    width:200px;
+    height: 200px;
+    border-radius: 180px;
+}
+
+
+
+.home { 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding-top: 100px; padding-bottom: 100px;
+    height: 100%;
+}
+
+.photoHome {
+    background-color: rgb(125, 70, 255,0);
+    width: 200px;
+    height: 200px;
+    transition: background-color .5s,box-shadow .5s;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.photoHome:hover{
+    background-color: rgb(125, 70, 255);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+
+
+.social .ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.social .icons_home {
+    display: inline-flex;
+    padding: 10px;
+    font-size: 50px;
+    color: rgb(125, 70, 255);
+    transition: transform 0.3s;
+}
+
+
+.icons_home:hover{
+    transform: scale(150%);
+}
+.icons_home:active{
+    transform: scale(90%);
+}
+
+.aboutMe{
+    background-color: white;
+    margin-top: 100px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    max-height: auto;
+}
+
+
+.aboutText {
+   text-align: center;
+}
+
+
+
+
+.aboutMeSectionOne {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    max-height:auto;
+}
+
+.aboutMeSectionOne div{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+
+
+.aboutMeSectionOne div:last-child {
+    transform: translateX(500px);
+    border-radius: 20px;
+}
+.aboutMeSectionOne div:last-child img{
+    max-height: 350px;
+border-radius: 25px}
+
+
+.aboutMeSectionOne div:first-child {
+    transform: translateX(-500px);
+    padding: 30px;
+}
+
+
+/*------------------------------AboutMeSecondSection-----------------------------------------------*/
+
+
+
+
+.aboutMeSectionTwo {
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.myIntrestsContainer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex: content;
+    background-color: gainsboro;
+    border-radius: 25px;
+    padding: 0px;
+    height: 400px;
+    width: auto;
+}
+.SliderContainer{
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+}
+.intrestsText {
+    display: flex;
+    text-align: center;
+    word-wrap: normal;
+    max-width: 400px;
+    padding: 50px;
+}
+
+
+.photo {
+
+    height: 400px;
+    width: 400px;
+}
+
+
+.myIntrestsPhotos {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transform: translateX(0px);
+    transition: 0.6s ease-in-out;
+
+    ;
+}
+
+.intrestsBtns {
+    display: flex;
+    justify-content: center;
+}
+
+
+.photo {
+    object-fit: cover;
+
+
+}
+
+
+
+.myIntrestsPhotos p {
+    text-align: center;
+    word-wrap: normal;
+}
+@media screen and (max-width: 768px) {
+
+    
+.aboutMeSectionOne {
+    flex-direction: column;
+}
+.myIntrestsContainer{
+    flex-direction: column ;
+    background-color: gainsboro;
+    border-radius: 25px;
+    padding: 0px;
+    height: auto;
+    width: 400px;
+}
+}
+
+
+/*class for intrestsText in js*/
+
+.intrestTextJs2 {
+    display: none;
+}
+
+/*-------------------------------------------------------End Of About Page ---------------------------------------------------*/
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+h1{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySkills {
+    margin-top: 100px;
+    background-color: white;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 300px;
+    overflow: clip;
+}
+.mySkills h2{
+    text-align: center;
+}
+.skillsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#imgSkills {
+    height: inherit;
+    max-width: 700px;
+    border-radius: 25px;
+    opacity: 0.9;
+}
+
+.skillsBox {
+    display: flex;
+    flex-flow: column;
+    width: 91%;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.skillTab {
+    display: flex;
+    flex-flow: row;
+    flex: 1 1 1;
+}
+.skillTab h3{
+    text-align: left;
+    width: 150px;
+    padding-left: 20px;
+}
+.skillTab ul{
+    transform:  scaleX(1.5) translateX(-100px);
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+.skillTab li {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: rgb(125, 70, 255);
+    display: inline-block;
+}
+
+
+
+.skillsBox {
+    align-items: center;
+    background-color: #ffffff;
+  
+}
+
+
+
+.skillsBox:not(:first-child) {
+
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+.skillTab div{
+    transform: translateX(-100px);
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s all ease;
+    align-self: center;
+    text-align: center;
+}
+
+.skillTab h3{
+    transform: translateX(-100px);
+    overflow: hidden;
+
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+
+
+
+
+
+.icons {
+    height: 40px;
+    width: 40px;
+}
+
+.progNum {
+    display: flex;
+    position: absolute;
+    justify-self: center;
+}
+
+h6 {
+    display: contents;
+}
+.headline{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mySkills{
+      display: flex;
+      flex-direction: column;
+
+      height: auto;
+    }
+
+      
+
+    .headLine{
+        text-align: center;
+    }
+   #imgSkills{max-width:100%;}
+
+   .skillsBox:not(:first-child){
+       padding-top: 10%;
+   }
+   .skillsBox:not(:last-child){
+       padding-bottom: 10%;
+   }
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+.myProjects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    margin-top: 100px;
+}
+.titleText{
+    display: flex;
+    margin: 0px 50px;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    flex:1 1 auto;
+}
+
+.titleText h2 {
+    width: 340px;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact{
+    margin-top: 200px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.proj{
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 50px 0px;
+
+}
+
+
+.proj div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding :25px;
+    position:absolute;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    word-wrap:normal ;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    border-radius: 25px;
+    transition: all 1s;
+}
+
+.proj img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.contact ul li {
+    display: inline;
+}
+
+.proj:hover div{
+    opacity: 1;
+}
+.ProjButton{
+    display: none;
+}
+.contact.icons_home:hover{
+transform: scale(1.5);
+font-size: 50px;}
+
+
+
+@media screen and (max-width: 768px) {
+    .ProjButton{
+        display: none;
+    }
+    .ProjButton0{
+        display: d;
+    }
+}
+
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+}
+.contact .title{
+    text-align: center;
+    font-size:  xx-large;
+}
+
+
+.ROLLER.active {
+    transform:  scaleX(1) translateX(0px) !important; 
+    opacity: 1;    
+}
