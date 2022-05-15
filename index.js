@@ -58,7 +58,7 @@ function mediaQueryCheck(x) {
         nav.style.display='none'
    }
 }
-*/.
+*/
 
 function  Activate (element) {element.classList.add('active');}
 function  Deactivate (element) {element.classList.remove('active');}
